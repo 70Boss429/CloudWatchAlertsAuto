@@ -15,7 +15,9 @@ $vols = @(get-ec2volume) | ? { $_.Attachments.InstanceId -eq $InstID}
 $volIds = $vols | % { $_.VolumeId}
 
 $InstName = (GetEC2InstanceName ($InstID))
-$AlarmArn = "arn:aws:sns:us-west-2:ACCT#:$Topic"
+$AlarmArn = "arn:aws:sns:us-west-2:<acct#>:"$Topic
+
+Write-Host $AlarmArn
 
 # Network Outbound Alarm
 Write-CWMetricAlarm `

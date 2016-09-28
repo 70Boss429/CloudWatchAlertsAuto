@@ -12,7 +12,7 @@ return $tagName
 }
 
 $InstName = (GetEC2InstanceName ($InstID))
-$AlarmArn = "arn:aws:sns:us-west-2:ACCT#:$Topic"
+$AlarmArn = "arn:aws:sns:us-west-2:<acct#>:$Topic"
 
 # Status Check
 Write-CWMetricAlarm `
