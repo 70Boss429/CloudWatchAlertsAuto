@@ -1,5 +1,5 @@
 ﻿Param(
-    $InstID = "i-0aa03524aca4c88f7",
+    $InstID = "<instanceID>",
     $Account = "Master",
     $Topic = "SamSmith"
 )
